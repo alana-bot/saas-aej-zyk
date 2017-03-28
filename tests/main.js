@@ -5,3 +5,13 @@ test('hello world', function() {
         .expectText('hello world')
         .run();
 })
+
+test('echo', function() {
+    return newTest()
+        .expectText('📢 🤖')
+        .sendText('echo')
+        .expectText('echo')
+        .expectText('echo')
+        .expectText('echo')
+        .run();
+})
