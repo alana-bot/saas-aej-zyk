@@ -4,7 +4,7 @@ addGreeting((user, response) => {
 
 newScript()
   .dialog((sessions, response) => {
-    If (sessions.message.type === 'text') {
+    if (sessions.message.type === 'text') {
         switch (sessions.message.text) {
             // solved better with intents!
             case 'hello':
