@@ -15,3 +15,11 @@ test('echo', function() {
         .expectText('echo')
         .run();
 })
+
+test('random', function() {
+    return newTest()
+        .expectText('📢 🤖')
+        .sendText('random text')
+        .expectText('random text')
+        .run();
+})
