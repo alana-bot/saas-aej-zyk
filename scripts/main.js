@@ -3,21 +3,21 @@ addGreeting((user, response) => {
 })
 
 newScript()
-  .dialog((sessions, response) => {
-    if (sessions.message.type === 'text') {
-        switch (sessions.message.text) {
+  .dialog((session, response) => {
+    if (session.message.type === 'text') {
+        switch (session.message.text) {
             // solved better with intents!
             case 'hello':
             case 'hi':
             case 'hey':
                 return response.sendText('hello world');
             case 'echo':
-                response.sendText(sessions.message.text);
-                response.sendText(sessions.message.text);
-                response.sendText(sessions.message.text);
+                response.sendText(session.message.text);
+                response.sendText(session.message.text);
+                response.sendText(session.message.text);
                 return;
             default:
-                return response.sendText(sessions.message.text);
+                return response.sendText(session.message.text);
         }
     }
   });
